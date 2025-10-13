@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs - Excellent Life Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Excellent_Logo.png">
+    <style>
+        .programs-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(30, 58, 138, 0.2);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+        }
+        
+        .program-detail {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+        
+        .program-detail h2 {
+            color: var(--sunshine-yellow);
+            margin-bottom: 1rem;
+        }
+        
+        .program-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--sunshine-yellow);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .back-to-home:hover {
+            text-decoration: underline;
+        }
+        
+        .program-content {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+        
+        .program-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .program-image {
+            flex: 1;
+            min-width: 300px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        
+        .program-images {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .program-images .program-image {
+            flex: 1;
+            min-width: 300px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            display: block;
+            position: relative;
+        }
+        
+        .program-offers {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .program-content {
+                flex-direction: column;
+            }
+            
+            .program-image {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="Excellent_Logo.png" alt="Excellent Life Foundation Logo" class="logo-img">
+                <span class="logo-text">Excellent Life Foundation</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="index.html#get-involved">Get Involved</a></li>
+                <li><a href="index.html#stories">Stories</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a href="donate.html" class="donate-btn">Donate</a>
+        </div>
+    </nav>
+
+    <section class="hero" style="height: auto; min-height: 80vh;">
+        <div class="programs-container">
+            <h1 class="section-title">Our Key Programs</h1>
+            
+            <div class="program-detail" id="youth-empowerment">
+                <h2><span class="program-icon">🎓</span> Youth Empowerment</h2>
+                <div class="program-content">
+                    <div class="program-text">
+                        <p>Our Youth Empowerment program is dedicated to providing educational resources, tutoring, and mentorship to young people in our community. We believe that investing in our youth is one of the most impactful ways to create lasting positive change.</p>
+                        
+                        <h3>Our Activities:</h3>
+                        <div class="program-offers">
+                            After-school tutoring sessions<br>
+                            College and career guidance<br>
+                            Leadership development workshops<br>
+                            Scholarship opportunities<br>
+                            Skills training programs<br>
+                            Taekwondo martial arts classes for all age groups and levels
+                        </div>
+                        
+                        <h3>Impact:</h3>
+                        <p>Since launching this program, we've helped over 500 young people improve their academic performance, with 85% of our participants going on to pursue higher education or enter skilled employment.</p>
+                        
+                    </div>
+                    <div class="program-images">
+                        <div class="program-image">
+                            <video controls style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                                <source src="youth_empowerment.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="program-image" style="margin-top: 1rem;">
+                            <img src="Youth_empowerment2.jpg" alt="Youth Empowerment Program 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="program-detail" id="community-wellness">
+                <h2><span class="program-icon">❤️</span> Community Wellness</h2>
+                <div class="program-content">
+                    <div class="program-text">
+                        <p>The Community Wellness program focuses on promoting physical and mental health for all ages through educational workshops, health screenings, and community activities. We believe that a healthy community is a thriving community.</p>
+                        
+                        <h3>Our Activities:</h3>
+                        <div class="program-offers">
+                            Free health screening clinics<br>
+                            Mental health awareness workshops<br>
+                            Senior wellness programs<br>
+                            Nutrition and cooking classes<br>
+                            Exercise and fitness groups
+                        </div>
+                        
+                        <h3>Impact:</h3>
+                        <p>This program has reached over 1,200 community members, with 70% reporting improved health outcomes and increased awareness of preventive health measures.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="program-detail" id="economic-uplift">
+                <h2><span class="program-icon">📈</span> Economic Uplift</h2>
+                <div class="program-content">
+                    <div class="program-text">
+                        <p>Our Economic Uplift program provides skills training and financial literacy workshops to support sustainable livelihoods. We focus on empowering individuals with practical tools and knowledge needed to achieve economic stability.</p>
+                        
+                        <h3>Our Activities:</h3>
+                        <div class="program-offers">
+                            Vocational skills training<br>
+                            Financial literacy workshops<br>
+                            Small business development support<br>
+                            Craft and artisan training<br>
+                            Microfinance opportunities
+                        </div>
+                        
+                        <h3>Impact:</h3>
+                        <p>Through this program, over 300 individuals have gained new skills that led to employment or started their own businesses, contributing to the economic growth of our community.</p>
+                    </div>
+                    <div class="program-images">
+                        <div class="program-image">
+                            <img src="Economic_Uplift" alt="Economic Uplift Program" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                        </div>
+                        <div class="program-image" style="margin-top: 1rem;">
+                            <img src="Economic_Uplift2.jpg" alt="Economic Uplift Program 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                        </div>
+                        <div class="program-image" style="margin-top: 1rem;">
+                            <img src="Economic_uplift3.jpg" alt="Economic Uplift Program 3" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                <a href="donate.html" class="btn btn-primary" style="display: inline-block;">Support Our Programs</a>
+                <a href="index.html" class="back-to-home-btn">← Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>We are located at Amukura house, behind EasyCoach door no.11 along Busia-Kisumu highway<br>Email: excellentlifefoundation@gmail.com<br>Phone: +254115183795 / +254736023327</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html" style="color: white;">Home</a><br>
+                <a href="index.html#about" style="color: white;">About Us</a><br>
+                <a href="index.html#programs" style="color: white;">Our Programs</a><br>
+                <a href="index.html#get-involved" style="color: white;">Get Involved</a><br>
+                <a href="donate.html" style="color: white;">Donate</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <div class="newsletter">
+                    <input type="email" placeholder="Your email address">
+                    <button class="newsletter-btn">Subscribe</button>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1BW6Ziih8j/" title="Facebook"><span>📘</span> Facebook</a>
+                    <a href="mailto:excellentlifefoundation@gmail.com" title="Email"><span>✉️</span> Email</a>
+                    <a href="tel:+254115183795" title="Call Us"><span>📞</span> Call</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Excellent Life Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
