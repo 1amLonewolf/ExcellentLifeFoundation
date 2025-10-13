@@ -520,6 +520,40 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);
         }
+        
+        .back-to-home-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(135deg, var(--sunshine-yellow), #e69008);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .back-to-home-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+            z-index: -1;
+        }
+        
+        .back-to-home-btn:hover::before {
+            left: 100%;
+        }
+        
+        .back-to-home-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);
+        }
 
         .social-links {
             display: flex;

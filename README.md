@@ -4,7 +4,7 @@ Welcome to the Excellent Life Foundation website repository. This is a responsiv
 
 ## Project Overview
 
-The Excellent Life Foundation website is built using HTML5, CSS3, and JavaScript, featuring a clean, accessible design that highlights the organization's mission, programs, and impact. The site follows modern web practices with a focus on user experience and accessibility.
+The Excellent Life Foundation website is built using HTML5, CSS3, and JavaScript, featuring a clean, accessible design that highlights the organization's mission "To give hope to those without in the community", vision "To empower the community with knowledge and life skills through social work", core values, programs, and impact. The site follows modern web practices with a focus on user experience and accessibility.
 
 ## Features
 
@@ -55,7 +55,9 @@ The website contains the following sections:
 - Designed with responsive images for various screen sizes
 
 ### About Us Section
-- Displays the organization's mission, vision, and values
+- Displays the organization's mission: "To give hope to those without in the community"
+- Vision: "To empower the community with knowledge and life skills through social work"
+- Core values: Transparency, accessibility, accountability, trustworthy, good listeners, adaptability, integrity and leadership
 - Three cards with appropriate icons
 - Responsive grid layout
 
@@ -113,6 +115,8 @@ To run this website locally:
 1. Clone or download this repository
 2. Open `index.html` in your preferred web browser
 3. The site will load and function immediately without any additional setup
+
+To access the live website, visit: https://excellentlifefoundation.org
 
 ## Responsive Design
 

@@ -19,6 +19,11 @@ The project contains the following files:
 - `Changing_Lives.jpg`: Image for impact statistics
 - `Building_Futures.jpg`: Image for impact statistics
 
+### Mission and Vision
+- **Mission**: To give hope to those without in the community
+- **Vision**: To empower the community with knowledge and life skills through social work
+- **Core Values**: Transparency, accessibility, accountability, trustworthy, good listeners, adaptability, integrity and leadership
+
 ### Key Technical Observations
 1. **HTML Structure**: Uses semantic HTML5 elements with proper accessibility considerations
    - Navigation with links to all major sections
