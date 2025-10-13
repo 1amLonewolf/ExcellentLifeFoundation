@@ -4,14 +4,14 @@ Welcome to the Excellent Life Foundation website repository. This is a responsiv
 
 ## Project Overview
 
-The Excellent Life Foundation website is built using HTML5 and CSS3, featuring a clean, accessible design that highlights the organization's mission, programs, and impact. The site follows modern web practices with a focus on user experience and accessibility.
+The Excellent Life Foundation website is built using HTML5, CSS3, and JavaScript, featuring a clean, accessible design that highlights the organization's mission, programs, and impact. The site follows modern web practices with a focus on user experience and accessibility.
 
 ## Features
 
 - Responsive design that works on all device sizes
 - Modern, clean layout with intuitive navigation
 - Program showcase section highlighting key initiatives
-- Impact statistics display
+- Impact statistics display with custom images
 - Volunteer and donation calls-to-action
 - Newsletter subscription
 - Social media integration
@@ -24,6 +24,8 @@ The Excellent Life Foundation website is built using HTML5 and CSS3, featuring a
   - Flexbox and Grid for layout
   - CSS Variables for consistent theming
   - Media queries for responsive behavior
+  - Advanced techniques like backdrop filters and gradient overlays
+- **JavaScript**: Interactive functionality (scroll behavior)
 
 ## Color Palette
 
@@ -48,20 +50,44 @@ The website contains the following sections:
 - Background image with overlay for readability
 
 ### Impact Statistics
-- Highlighting key metrics: Lives Touched, Volunteers, Years of Service
-- Visually prominent number display
+- Visual display using custom images: Growing Stronger, Changing Lives, Building Futures
+- Each stat has a visual representation and descriptive text
+- Designed with responsive images for various screen sizes
+
+### About Us Section
+- Displays the organization's mission, vision, and values
+- Three cards with appropriate icons
+- Responsive grid layout
 
 ### Programs Section
 - Grid of program cards showcasing key initiatives
 - Youth Empowerment, Community Wellness, and Economic Uplift programs
 - Icons and descriptions for each program
+- "Learn More" links to detailed information
+
+### Get Involved Section
+- Encourages community participation
+- Options for volunteering and donations
+- Includes a direct link to volunteer form
 
 ### Featured Story
 - Personal testimonial section
 - Maria's journey: From participant to program leader
+- Inspiring quote and story
+
+### Events Section
+- Upcoming events display
+- Community Health Day, Back to School Drive, Tree Planting Initiative
+- Dates and descriptions for each event
 
 ### Call-to-Action Banner
 - Encouraging community involvement and donations
+- Buttons for volunteering and making donations
+
+### Contact Section
+- Contact information including address, email, and phone
+- Social media links
+- Section for getting in touch
 
 ### Footer
 - Contact information
@@ -73,6 +99,12 @@ The website contains the following sections:
 
 - `index.html`: Main HTML structure and content
 - `style.css`: All styling and layout definitions
+- `README.md`: Project documentation
+- `QWEN.md`: Internal documentation
+- `Excellent_Logo.png`: Organization logo
+- `Growing_Stronger.jpg`: Image for impact statistics
+- `Changing_Lives.jpg`: Image for impact statistics
+- `Building_Futures.jpg`: Image for impact statistics
 
 ## Setup and Usage
 
@@ -89,6 +121,12 @@ The website is fully responsive and adapts to different screen sizes:
 - Adjusts navigation for smaller screens
 - Maintains readability and usability on all devices
 
+## JavaScript Functionality
+
+The website includes JavaScript for:
+- Smooth scrolling to the donation button when clicking "Make a Gift" in the CTA section
+- Enhanced user experience for key interactions
+
 ## Customization
 
 You can customize the website by modifying the following:
@@ -97,6 +135,8 @@ You can customize the website by modifying the following:
 - Modify colors in the CSS `:root` variables section
 - Replace images and content to match your organization's specifics
 - Adjust program descriptions in the Programs section
+- Add or remove sections as needed
+- Update contact information and social media links
 
 ## Contributing
 
@@ -108,13 +148,13 @@ You can customize the website by modifying the following:
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 
 - Design inspired by modern non-profit websites
 - Icons sourced from Unicode characters
-- Background image from Unsplash (placeholder image)
+- Background image from Unsplash
 - Built with accessibility in mind
 
 ## Contact
@@ -123,4 +163,3 @@ For questions or support:
 - Address: Amukura house, behind EasyCoach door no.11 along Busia-Kisumu highway
 - Email: excellentlifefoundation@gmail.com
 - Phone: +254115183795 / +254736023327
-- Address: 123 Community Street, City, State 12345
