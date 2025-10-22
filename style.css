@@ -234,6 +234,75 @@
             justify-content: center;
             flex-wrap: wrap;
         }
+        
+        .dual-audience-cta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .audience-card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            min-width: 250px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .audience-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .audience-card h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .audience-card p {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .audience-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .dual-purpose {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .purpose-card {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .purpose-card h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .purpose-card p {
+            color: white;
+        }
 
         .btn {
             padding: 1rem 2rem;
