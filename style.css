@@ -86,10 +86,82 @@
             transition: color 0.3s;
         }
 
+        .nav-links a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .nav-icon {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 5px;
+            background: transparent;
+            border: 2px solid var(--forest-green);
+            border-radius: 8px;
+            padding: 2px;
+        }
+        
+        .nav-text {
+            font-size: 0.8rem;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background: var(--warm-white);
+            color: var(--forest-green);
+            padding: 5px 10px;
+            border: 2px solid var(--forest-green);
+            border-radius: 6px;
+            white-space: nowrap;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            transform: translateX(-10px);
+        }
+        
+        .nav-links a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 6px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
         .nav-links a:hover {
             color: var(--forest-green);
+            background: rgba(254, 254, 254, 0.2);
         }
-
+        
+        .nav-links a:hover .nav-text {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 4px;
+        }
+        
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
         .donate-btn {
             background: linear-gradient(135deg, var(--forest-green), #087f5b);
             color: white;
@@ -423,6 +495,74 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
+        /* Get Help Section */
+        .get-help-section {
+            background: transparent;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .get-help-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .get-help-section h2 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+        
+        .get-help-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .help-card {
+            backdrop-filter: blur(10px);
+            background: rgba(30, 58, 138, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .help-card:hover {
+            transform: translateY(-5px);
+            background: rgba(30, 58, 138, 0.3);
+        }
+        
+        .help-card h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .help-card p {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-help {
+            backdrop-filter: blur(10px);
+            background: rgba(30, 58, 138, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 2rem;
+        }
+        
+        .contact-help p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
         /* CTA Banner */
         .cta-banner {
             background: transparent;
@@ -575,7 +715,64 @@
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .nav-links {
-                display: none;
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: rgba(254, 254, 254, 0.9);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                padding: 1rem 0;
+            }
+            
+            .nav-links a {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                gap: 8px;
+            }
+            
+            .nav-text {
+                opacity: 1 !important;
+                visibility: visible !important;
+                position: static;
+                background: var(--warm-white);
+                color: var(--forest-green);
+                padding: 5px 10px;
+                border: 2px solid var(--forest-green);
+                border-radius: 6px;
+                margin: 0 0 0 8px;
+                transition: none;
+                font-size: 1rem;
+            }
+            
+            .nav-links a {
+                flex-direction: row;
+                align-items: center;
+                gap: 0;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .donate-btn {
+                display: block;
+                margin: 1rem auto;
+                width: 80%;
+                text-align: center;
             }
 
             .hero h1 {
@@ -588,5 +785,22 @@
 
             .stats-container {
                 flex-direction: column;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .dual-cta {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+            
+            .dual-cta a {
+                margin: 0.5rem 0 !important;
+                width: 80%;
             }
         }

@@ -12,6 +12,7 @@ The Excellent Life Foundation website is built using HTML5, CSS3, and JavaScript
 - Modern, clean layout with intuitive navigation
 - Program showcase section highlighting key initiatives
 - Impact statistics display with custom images
+- Comprehensive donation page with multiple options (bank transfer, mobile money, in-kind donations, corporate partnerships)
 - Volunteer and donation calls-to-action
 - Newsletter subscription
 - Social media integration
@@ -20,12 +21,25 @@ The Excellent Life Foundation website is built using HTML5, CSS3, and JavaScript
 ## Technologies Used
 
 - **HTML5**: Semantic markup and structure
+  - Multi-page website structure (index.html, donate.html, programs.html, events.html)
+  - Responsive navigation system
+  - Semantic elements for accessibility
+  - Documentation: [HTML Documentation](./docs/html.md)
 - **CSS3**: Styling, layout, and responsive design
   - Flexbox and Grid for layout
   - CSS Variables for consistent theming
   - Media queries for responsive behavior
   - Advanced techniques like backdrop filters and gradient overlays
-- **JavaScript**: Interactive functionality (scroll behavior)
+  - Glass-morphism effects throughout the site
+  - Animated buttons with shimmer effects
+  - Comprehensive styling for all pages with consistent forest green theme
+  - Documentation: [CSS Documentation](./docs/css.md)
+- **JavaScript**: Interactive functionality
+  - Donation page redirection
+  - Smooth scrolling behavior
+  - Enhanced user experience
+  - Hamburger menu functionality
+  - Documentation: [JavaScript Documentation](./docs/javascript.md)
 
 ## Color Palette
 
@@ -66,6 +80,7 @@ The website contains the following sections:
 - Youth Empowerment, Community Wellness, and Economic Uplift programs
 - Icons and descriptions for each program
 - "Learn More" links to detailed information
+- Dedicated programs.html page with comprehensive details about each program, including activities and impact metrics
 
 ### Get Involved Section
 - Encourages community participation
@@ -79,8 +94,8 @@ The website contains the following sections:
 
 ### Events Section
 - Upcoming events display
-- Community Health Day, Back to School Drive, Tree Planting Initiative
-- Dates and descriptions for each event
+- Information about planning for future community events
+- Links to events.html page for updates
 
 ### Call-to-Action Banner
 - Encouraging community involvement and donations
@@ -100,6 +115,9 @@ The website contains the following sections:
 ## Files
 
 - `index.html`: Main HTML structure and content
+- `donate.html`: Donation page with bank transfer, mobile money, in-kind donations and corporate partnerships information
+- `programs.html`: Detailed information about the organization's programs (Youth Empowerment, Community Wellness, Economic Uplift)
+- `events.html`: Events page with information about upcoming community events
 - `style.css`: All styling and layout definitions
 - `README.md`: Project documentation
 - `QWEN.md`: Internal documentation
@@ -107,6 +125,23 @@ The website contains the following sections:
 - `Growing_Stronger.jpg`: Image for impact statistics
 - `Changing_Lives.jpg`: Image for impact statistics
 - `Building_Futures.jpg`: Image for impact statistics
+- `Get_involved_with_us.jpg`: Image for the get involved section
+- `contact_us.jpg`: Image for the contact section
+- `Youth_empowerment2.jpg`: Image for the youth empowerment program
+- `Economic_Uplift`: Image for the economic uplift program
+- `Economic_Uplift2.jpg`: Image for the economic uplift program
+- `Economic_uplift3.jpg`: Image for the economic uplift program
+- `youth_empowerment.mp4`: Video for the youth empowerment program
+- `facebook.png`: Facebook social media icon
+- `gmail.png`: Gmail contact icon
+- `call_us.png`: Phone contact icon
+- `CNAME`: Domain configuration file
+- `package.json`: Project dependencies and scripts configuration
+- `.env`: Environment variables configuration
+- `.gitignore`: Files and directories to exclude from version control
+- `.prettierrc`: Code formatting configuration
+- `.eslintrc.js`: JavaScript linting configuration
+- `tsconfig.json`: TypeScript configuration (for future use)
 
 ## Setup and Usage
 
@@ -129,6 +164,7 @@ The website is fully responsive and adapts to different screen sizes:
 
 The website includes JavaScript for:
 - Smooth scrolling to the donation button when clicking "Make a Gift" in the CTA section
+- Donation page redirection functionality
 - Enhanced user experience for key interactions
 
 ## Customization

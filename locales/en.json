@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Excellent Life Foundation",
+    "description": "Empowering Our Community to Live Excellent Lives"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "getHelp": "Get Help",
+    "getInvolved": "Get Involved",
+    "stories": "Stories",
+    "events": "Events",
+    "contact": "Contact",
+    "donate": "Join Us in Support"
+  },
+  "hero": {
+    "title": "Empowering Our Community to Live Excellent Lives",
+    "subtitle": "Join us in creating lasting change through education, health, and economic empowerment programs.",
+    "explorePrograms": "Our Programs",
+    "wantToHelp": "I Want to Help",
+    "needHelp": "I Need Help",
+    "supportUs": "Support Us"
+  },
+  "about": {
+    "title": "About Us",
+    "mission": "Our Mission",
+    "missionText": "To give hope to those without in the community",
+    "vision": "Our Vision",
+    "visionText": "To empower the community with knowledge and life skills through social work",
+    "values": "Our Core Values",
+    "valuesList": [
+      "Transparency",
+      "Accessibility",
+      "Accountability",
+      "Trustworthy",
+      "Good Listeners",
+      "Adaptability",
+      "Integrity",
+      "Leadership"
+    ]
+  },
+  "programs": {
+    "title": "Our Programs",
+    "youthEmpowerment": {
+      "title": "Youth Empowerment",
+      "description": "Empowering young people through education, skills development, and mentorship programs."
+    },
+    "communityWellness": {
+      "title": "Community Wellness",
+      "description": "Improving health outcomes and promoting wellness within our communities."
+    },
+    "economicUplift": {
+      "title": "Economic Uplift",
+      "description": "Creating economic opportunities and promoting financial literacy."
+    },
+    "learnMore": "Learn More"
+  },
+  "getInvolved": {
+    "title": "Get Involved With Us",
+    "description": "There are many ways you can make a difference in our community. Whether you volunteer your time, donate resources, or spread the word about our work, your support helps us create lasting change.",
+    "joinUs": "Join Us"
+  },
+  "stories": {
+    "title": "Maria's Journey: From Participant to Program Leader",
+    "quote": "The Excellent Life Foundation gave me more than just resources; they gave me hope, skills, and the opportunity to transform my life. Now I'm empowering others with the same tools that changed my life.",
+    "story": "Maria's journey began when she was struggling to support her family after losing her job. Through our Youth Empowerment Program, she gained valuable skills and found a path to financial stability. She has since become one of our program leaders, mentoring others facing similar challenges."
+  },
+  "events": {
+    "title": "Upcoming Events",
+    "event1": {
+      "title": "Stay Tuned for Updates!",
+      "description": "We're currently planning exciting events for our community.",
+      "link": "Learn More →"
+    },
+    "event2": {
+      "title": "Check Back Soon",
+      "description": "More events and activities will be announced shortly.",
+      "link": "Learn More →"
+    },
+    "event3": {
+      "title": "Follow Us",
+      "description": "Stay connected through our social media for the latest updates.",
+      "link": "Learn More →"
+    }
+  },
+  "ctaBanner": {
+    "title": "Join Us in Building a Stronger Community",
+    "volunteer": "Become a Volunteer",
+    "join": "Join Us"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "We'd love to hear from you! Reach out to us with any questions, suggestions, or to learn more about our work.",
+    "address": "Address",
+    "email": "Email",
+    "phone": "Phone",
+    "addressText": "Amukura house, behind EasyCoach door no.11 along Busia-Kisumu highway",
+    "emailText": "excellentlifefoundation@gmail.com",
+    "phoneText": "+254115183795 / +254736023327"
+  },
+  "getHelp": {
+    "title": "Get Help",
+    "description": "If you or someone you know needs assistance, we're here to support you. Our programs provide resources and opportunities to help you succeed.",
+    "youthEmpowerment": "Youth Empowerment",
+    "youthDescription": "Access educational and skill-building opportunities.",
+    "communityWellness": "Community Wellness",
+    "wellnessDescription": "Get support for health and wellness needs.",
+    "economicUplift": "Economic Uplift",
+    "economicDescription": "Discover opportunities for economic development.",
+    "contactHelp": "For immediate assistance, contact us:"
+  },
+  "footer": {
+    "newsletter": "Newsletter",
+    "subscribe": "Subscribe",
+    "follow": "Follow Us",
+    "copyright": "&copy; 2025 Excellent Life Foundation. All rights reserved."
+  }
+}

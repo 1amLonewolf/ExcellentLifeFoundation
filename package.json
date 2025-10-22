@@ -1,0 +1,32 @@
+{
+  "name": "excellent-life-foundation-website",
+  "version": "1.0.0",
+  "description": "Website for Excellent Life Foundation - a non-profit organization dedicated to empowering communities through education, health, and economic programs.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server",
+    "dev": "npx http-server -o",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "nonprofit",
+    "foundation",
+    "community",
+    "education",
+    "health",
+    "social-impact"
+  ],
+  "author": "Excellent Life Foundation",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/excellentlifefoundation/website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/excellentlifefoundation/website/issues"
+  },
+  "homepage": "https://excellentlifefoundation.org"
+}

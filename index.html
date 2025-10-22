@@ -15,16 +15,48 @@
                 <img src="Excellent_Logo.png" alt="Excellent Life Foundation Logo" class="logo-img">
                 <span class="logo-text">Excellent Life Foundation</span>
             </div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#get-involved">Get Involved</a></li>
-                <li><a href="#stories">Stories</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">
+                    <img src="dashboard_Icons/Home_Icon.gif" alt="Home" class="nav-icon">
+                    <span class="nav-text">Home</span>
+                </a></li>
+                <li><a href="#about">
+                    <img src="dashboard_Icons/About_Icon.gif" alt="About" class="nav-icon">
+                    <span class="nav-text">About</span>
+                </a></li>
+                <li><a href="#programs">
+                    <img src="dashboard_Icons/Programs_icon.gif" alt="Programs" class="nav-icon">
+                    <span class="nav-text">Programs</span>
+                </a></li>
+                <li><a href="#get-help">
+                    <img src="dashboard_Icons/GetHelp_icon.gif" alt="Get Help" class="nav-icon">
+                    <span class="nav-text">Get Help</span>
+                </a></li>
+                <li><a href="#get-involved">
+                    <img src="dashboard_Icons/GetInvolved_Icon.gif" alt="Get Involved" class="nav-icon">
+                    <span class="nav-text">Get Involved</span>
+                </a></li>
+                <li><a href="#stories">
+                    <img src="dashboard_Icons/Stories_Icons.gif" alt="Stories" class="nav-icon">
+                    <span class="nav-text">Stories</span>
+                </a></li>
+                <li><a href="#events">
+                    <img src="dashboard_Icons/Events_Icon.gif" alt="Events" class="nav-icon">
+                    <span class="nav-text">Events</span>
+                </a></li>
+                <li><a href="#contact">
+                    <img src="dashboard_Icons/Contact_Icon.gif" alt="Contact" class="nav-icon">
+                    <span class="nav-text">Contact</span>
+                </a></li>
             </ul>
-            <a href="donate.html" class="donate-btn">Donate</a>
+            <a href="donate.html" class="donate-btn">Join Us in Support</a>
         </div>
     </nav>
 
@@ -35,7 +67,10 @@
             <p>Join us in creating lasting change through education, health, and economic empowerment programs.</p>
             <div class="cta-buttons">
                 <a href="#programs" class="btn btn-primary">Our Programs</a>
-                <a href="donate.html" class="btn btn-secondary">Donate Now</a>
+                <div class="dual-cta">
+                    <a href="donate.html" class="btn btn-secondary" style="margin-right: 1rem;">I Want to Help</a>
+                    <a href="#get-help" class="btn btn-primary">I Need Help</a>
+                </div>
             </div>
         </div>
     </section>
@@ -118,8 +153,7 @@
                 <h2>Get Involved With Us</h2>
                 <p>There are many ways you can make a difference in our community. Whether you volunteer your time, donate resources, or spread the word about our work, your support helps us create lasting change.</p>
                 <div style="margin-top: 2rem;">
-                    <a href="https://forms.gle/Tkyt9BKXZK9Strjz6" class="btn btn-primary volunteer-btn">Become a Volunteer</a>
-                    <a href="donate.html" class="btn btn-secondary" style="margin-left: 1rem;">Make a Donation</a>
+                    <a href="https://forms.gle/Tkyt9BKXZK9Strjz6" class="btn btn-primary volunteer-btn">Join Us</a>
                 </div>
             </div>
             <div class="story-image">
@@ -167,12 +201,42 @@
         </div>
     </section>
 
+    <!-- Get Help Section -->
+    <section id="get-help" class="get-help-section">
+        <div class="container">
+            <h2>Get Help</h2>
+            <p>If you or someone you know needs assistance, we're here to support you. Our programs provide resources and opportunities to help you succeed.</p>
+            <div class="get-help-options">
+                <div class="help-card">
+                    <h3>Youth Empowerment</h3>
+                    <p>Access educational and skill-building opportunities.</p>
+                    <a href="programs.html#youth-empowerment" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="help-card">
+                    <h3>Community Wellness</h3>
+                    <p>Get support for health and wellness needs.</p>
+                    <a href="programs.html#community-wellness" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="help-card">
+                    <h3>Economic Uplift</h3>
+                    <p>Discover opportunities for economic development.</p>
+                    <a href="programs.html#economic-uplift" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="contact-help">
+                <p>For immediate assistance, contact us:</p>
+                <p><strong>Email:</strong> excellentlifefoundation@gmail.com</p>
+                <p><strong>Phone:</strong> +254115183795 / +254736023327</p>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Banner -->
     <section class="cta-banner">
         <h2>Join Us in Building a Stronger Community</h2>
         <div class="cta-buttons">
             <a href="https://forms.gle/Tkyt9BKXZK9Strjz6" class="btn btn-primary volunteer-btn">Become a Volunteer</a>
-            <a href="donate.html" class="btn btn-secondary donate-btn-cta">Make a Gift</a>
+            <a href="donate.html" class="btn btn-secondary donate-btn-cta">Join Us</a>
         </div>
     </section>
 
@@ -242,6 +306,24 @@
                     window.location.href = 'donate.html';
                 });
             }
+            
+            // Hamburger menu functionality
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Close menu when clicking on a link
+            const navItems = document.querySelectorAll('.nav-links a');
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
         });
     </script>
 </body>

@@ -11,6 +11,9 @@
 ### Codebase Structure
 The project contains the following files:
 - `index.html`: Main HTML file with semantic structure and content
+- `donate.html`: Donation page with bank transfer, mobile money, in-kind donations and corporate partnerships information
+- `programs.html`: Detailed information about the organization's programs (Youth Empowerment, Community Wellness, Economic Uplift)
+- `events.html`: Events page with information about upcoming community events
 - `style.css`: Complete CSS file with responsive design
 - `README.md`: Comprehensive project documentation
 - `QWEN.md`: Internal documentation (this file)
@@ -18,6 +21,17 @@ The project contains the following files:
 - `Growing_Stronger.jpg`: Image for impact statistics
 - `Changing_Lives.jpg`: Image for impact statistics
 - `Building_Futures.jpg`: Image for impact statistics
+- `Get_involved_with_us.jpg`: Image for the get involved section
+- `contact_us.jpg`: Image for the contact section
+- `Youth_empowerment2.jpg`: Image for the youth empowerment program
+- `Economic_Uplift`: Image for the economic uplift program
+- `Economic_Uplift2.jpg`: Image for the economic uplift program
+- `Economic_uplift3.jpg`: Image for the economic uplift program
+- `youth_empowerment.mp4`: Video for the youth empowerment program
+- `facebook.png`: Facebook social media icon
+- `gmail.png`: Gmail contact icon
+- `call_us.png`: Phone contact icon
+- `CNAME`: Domain configuration file
 
 ### Mission and Vision
 - **Mission**: To give hope to those without in the community
@@ -29,7 +43,9 @@ The project contains the following files:
    - Navigation with links to all major sections
    - Properly structured sections for hero, stats, programs, etc.
    - Responsive navigation that adapts for mobile
+   - Multiple HTML pages: index.html (main page), donate.html (donation options), programs.html (detailed program info), events.html (upcoming events)
    - Includes JavaScript for smooth scrolling functionality
+   - Donation page includes multiple donation methods: bank transfer, mobile money, in-kind donations, and corporate partnerships
 
 2. **CSS Features**:
    - CSS custom properties for consistent color scheme
@@ -38,9 +54,13 @@ The project contains the following files:
    - Smooth transitions and hover effects
    - Modern CSS techniques like backdrop filters and gradient overlays
    - Visual enhancements using glass-morphism effects
+   - Comprehensive styling for all pages with consistent theme
+   - Animated buttons with shimmer effects
+   - Mobile-responsive adjustments for all screen sizes
 
 3. **JavaScript Functionality**:
    - Adds smooth scrolling behavior when clicking "Make a Gift" button
+   - Handles donation page redirection functionality
    - Improves user experience for key interactions
 
 4. **Design Elements**:
@@ -50,6 +70,7 @@ The project contains the following files:
    - Program cards with hover animations
    - Color scheme focusing on blues, greens, and yellow accents
    - Glass-morphism design elements throughout the site for a modern look
+   - Rich media content including images for each program and a video for the youth empowerment program
 
 ### Responsiveness
 - Mobile-first approach with responsive breakpoints
