@@ -206,8 +206,35 @@
     </footer>
     
     <script>
+        // Function to handle anchor link scrolling without hash update
+        function handleAnchorLink(link, e) {
+            e.preventDefault();
+            
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                // Scroll to the element
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Remove the hash from the URL using history.replaceState
+                history.replaceState(null, null, window.location.pathname + window.location.search);
+            }
+        }
+        
         // Hamburger menu functionality
         document.addEventListener('DOMContentLoaded', function() {
+            // Handle all anchor links (for both navigation and other page links)
+            const anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+            anchorLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    handleAnchorLink(this, e);
+                });
+            });
+            
             const mobileMenu = document.getElementById('mobile-menu');
             const navLinks = document.querySelector('.nav-links');
             
@@ -217,10 +244,15 @@
                 });
             }
             
-            // Close menu when clicking on a link
+            // Close menu when clicking on a navigation link
             const navItems = document.querySelectorAll('.nav-links a');
             navItems.forEach(item => {
-                item.addEventListener('click', () => {
+                item.addEventListener('click', (e) => {
+                    // Only handle internal anchor links
+                    if (item.getAttribute('href').startsWith('#')) {
+                        handleAnchorLink(item, e);
+                    }
+                    mobileMenu.classList.remove('active');
                     navLinks.classList.remove('active');
                 });
             });
