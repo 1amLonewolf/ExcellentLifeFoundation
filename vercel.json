@@ -14,7 +14,7 @@
       "destination": "https://www.excellentlifefoundation.org/"
     },
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "has": [
         {
           "type": "host",

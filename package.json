@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/excellentlifefoundation/website/issues"
   },
-  "homepage": "https://excellentlifefoundation.org"
+  "homepage": "https://excellentlifefoundation.org",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.2.0"
+  }
 }
