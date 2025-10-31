@@ -60,7 +60,7 @@
                     <span class="nav-text">Contact</span>
                 </a></li>
             </ul>
-            <a href="donate.html" class="donate-btn">Join Us in Support</a>
+            <a href="donate.html" class="donate-btn">Join Us</a>
         </div>
     </nav>
 
@@ -336,6 +336,7 @@
             
             if (mobileMenu) {
                 mobileMenu.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
                     navLinks.classList.toggle('active');
                 });
             }
@@ -344,8 +345,19 @@
             const navItems = document.querySelectorAll('.nav-links a');
             navItems.forEach(item => {
                 item.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
                     navLinks.classList.remove('active');
                 });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = navLinks.contains(event.target) || mobileMenu.contains(event.target);
+                
+                if (!isClickInsideNav && navLinks.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
             });
         });
     </script>
