@@ -102,6 +102,48 @@
         .back-to-home-btn:hover {
             text-decoration: underline;
         }
+        
+        /* Mobile Responsiveness for Team Page */
+        @media (max-width: 768px) {
+            .team-container {
+                padding: 1.5rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr; /* Single column on mobile */
+                gap: 1.5rem;
+            }
+            
+            .team-card {
+                padding: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .team-container {
+                padding: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .team-name {
+                font-size: 1.2rem;
+            }
+            
+            .team-role {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>

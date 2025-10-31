@@ -10,6 +10,13 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        
+        /* Ensure content fits within viewport */
+        .programs, .hero, .featured-story, .impact-stats, .get-help-section, footer {
+            max-width: 100vw;
+            overflow-x: hidden;
         }
 
         /* Color Variables */
@@ -145,12 +152,61 @@
             transform: translateX(0);
         }
         
+        /* Desktop view: show text as tooltips */
+        @media (min-width: 769px) {
+            .nav-text {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                left: 100%;
+                top: 0;
+                background: var(--warm-white);
+                color: var(--forest-green);
+                padding: 5px 10px;
+                border: 2px solid var(--forest-green);
+                border-radius: 6px;
+                white-space: nowrap;
+                margin-left: 10px;
+                transition: all 0.3s ease;
+                z-index: 1000;
+                transform: translateX(-10px);
+            }
+            
+            .nav-links a:hover .nav-text {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Mobile view: show text permanently next to icons */
+        @media (max-width: 768px) {
+            .nav-links .nav-text {
+                opacity: 1 !important;
+                visibility: visible !important;
+                position: static;
+                background: rgba(254, 254, 240, 0.7); /* Light background */
+                color: var(--forest-green);
+                padding: 6px 12px;
+                border: 2px solid var(--forest-green); /* Match the icon boundary color */
+                border-radius: 20px; /* Rounded boundary */
+                margin: 0;
+                transform: none;
+                white-space: nowrap; /* Keep text on one line to fit properly */
+                font-weight: 500;
+                display: inline-block; /* Auto-fit to text width */
+            }
+        }
+        
         /* Hamburger Menu */
         .menu-toggle {
             display: none;
             flex-direction: column;
             cursor: pointer;
             padding: 4px;
+            background: transparent;
+            border: none;
+            z-index: 1001;
         }
         
         .bar {
@@ -160,6 +216,33 @@
             margin: 3px 0;
             transition: 0.3s;
             border-radius: 2px;
+        }
+        
+        /* Hamburger menu animation */
+        .menu-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .menu-toggle.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        
+        .menu-toggle.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+        
+        /* Mobile menu enhancements */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .donate-btn {
+                display: block;
+                margin: 1rem auto;
+                width: 80%;
+                text-align: center;
+            }
         }
         
         .donate-btn {
@@ -794,6 +877,8 @@
                 transition: 0.3s;
                 box-shadow: 0 10px 27px rgba(0,0,0,0.05);
                 padding: 2rem 0;
+                max-height: calc(100vh - 70px); /* Limit height to viewport minus navbar height */
+                overflow-y: auto; /* Make it scrollable */
             }
             
             .nav-links.active {
@@ -806,35 +891,33 @@
             
             .nav-links a {
                 display: flex;
-                flex-direction: row;
+                flex-direction: row; /* Display icon and text side by side */
                 align-items: center;
-                justify-content: center;
-                font-size: 1.2rem;
-                gap: 8px;
+                justify-content: flex-start; /* Align items to the left */
+                font-size: 1.1rem;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                color: #333;
+                transition: background-color 0.3s;
+                gap: 15px; /* Space between icon and text */
+            }
+            
+            .nav-links a:hover {
+                background: rgba(254, 254, 254, 0.3);
+                border-radius: 8px;
+            }
+            
+            .nav-icon {
+                width: 24px;
+                height: 24px;
             }
             
             .nav-text {
-                opacity: 1 !important;
-                visibility: visible !important;
-                position: static;
-                background: var(--warm-white);
-                color: var(--forest-green);
-                padding: 5px 10px;
-                border: 2px solid var(--forest-green);
-                border-radius: 6px;
-                margin: 0 0 0 8px;
-                transition: none;
-                font-size: 1rem;
-            }
-            
-            .nav-links a {
-                flex-direction: row;
-                align-items: center;
-                gap: 0;
-            }
-            
-            .menu-toggle {
-                display: flex;
+                font-size: 1rem; /* Slightly larger font for mobile */
+                margin: 0;
+                display: inline-block; /* Changed to inline-block to fit text width */
+                color: #333;
+                text-align: left; /* Left align text */
             }
             
             .donate-btn {
@@ -845,20 +928,74 @@
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .hero {
+                padding: 1rem;
+                margin-top: 60px;
+                min-height: auto; /* Allow to fit content */
+            }
+            
+            .hero-content {
+                padding: 1.5rem;
+                margin: 1rem;
+                width: 100%; /* Ensure it fits within viewport */
+                word-wrap: break-word; /* Break long words */
             }
 
             .story-container {
                 grid-template-columns: 1fr;
-            }
-
-            .stats-container {
-                flex-direction: column;
+                padding: 1rem;
+                width: 100%; /* Ensure container fits in viewport */
+                word-wrap: break-word; /* Break long words */
             }
             
+            .stats-container {
+                flex-direction: column;
+                padding: 1rem;
+                width: 100%; /* Ensure container fits in viewport */
+            }
+            
+            .stat-item {
+                min-width: auto;
+                margin-bottom: 1.5rem;
+                word-wrap: break-word; /* Break long words */
+            }
+            
+            .stat-visual {
+                height: 150px;
+            }
+            
+            .stat-image {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .programs-grid {
+                grid-template-columns: 1fr; /* Single column on mobile */
+                padding: 1rem;
+                gap: 1.5rem;
+                width: 100%; /* Ensure grid fits in viewport */
+                word-wrap: break-word; /* Break long words */
+            }
+            
+            .program-card {
+                padding: 1.5rem;
+                word-wrap: break-word; /* Break long words */
+            }
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 1rem;
+                width: 100%; /* Ensure button container fits */
             }
             
             .dual-cta {
@@ -866,10 +1003,194 @@
                 flex-direction: column;
                 width: 100%;
                 align-items: center;
+                gap: 1rem;
             }
             
             .dual-cta a {
                 margin: 0.5rem 0 !important;
-                width: 80%;
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .dual-purpose {
+                flex-direction: column;
+                gap: 1.5rem;
+                width: 100%; /* Ensure container fits */
+                word-wrap: break-word; /* Break long words */
+            }
+            
+            .purpose-card {
+                min-width: auto;
+                padding: 1.5rem;
+                word-wrap: break-word; /* Break long words */
+            }
+            
+            .get-help-options {
+                grid-template-columns: 1fr;
+                width: 100%; /* Ensure container fits */
+            }
+            
+            .help-card {
+                padding: 1.5rem;
+                word-wrap: break-word; /* Break long words */
+            }
+            
+            .contact-help {
+                padding: 1.5rem;
+                word-wrap: break-word; /* Break long words */
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                width: 100%; /* Ensure footer fits in viewport */
+                word-wrap: break-word; /* Break long words */
+            }
+            
+            .footer-section {
+                padding: 1.5rem;
+                word-wrap: break-word; /* Break long words */
+            }
+            
+            /* Prevent horizontal scrolling */
+            * {
+                max-width: 100%;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+            }
+        }
+        
+        /* Additional mobile responsiveness adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 1rem;
+                margin-top: 60px;
+            }
+            
+            .hero-content {
+                padding: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .programs-grid {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+            }
+            
+            .program-card {
+                padding: 1.5rem;
+            }
+            
+            .featured-story {
+                padding: 2rem 1rem;
+            }
+            
+            .story-container {
+                padding: 1.5rem;
+            }
+            
+            .get-help-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .help-card {
+                padding: 1.5rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-section {
+                padding: 1rem;
+            }
+        }
+        
+        /* Extra small devices (phones, 600px and down) */
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 0.8rem 5%;
+            }
+            
+            .hero h1 {
+                font-size: 1.6rem;
+                line-height: 1.3;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+                line-height: 1.3;
+            }
+            
+            .btn, .donate-btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.9rem;
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .programs {
+                padding: 2.5rem 1rem;
+            }
+            
+            /* Improve text readability on small screens */
+            p {
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+            
+            .program-card p, .story-content p, .purpose-card p, .help-card p, .team-bio {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+            
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .stat-label {
+                font-size: 1rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr; /* Single column on small screens */
+                gap: 1.5rem;
+            }
+            
+            .team-card {
+                padding: 1.2rem;
+            }
+            
+            .story-content {
+                padding: 1rem;
+            }
+            
+            .story-image {
+                height: 200px;
+            }
+        }
+        
+        /* Tablet responsiveness */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .dual-purpose {
+                flex-direction: column;
+            }
+            
+            .stats-container {
+                flex-direction: row;
+                justify-content: space-around;
             }
         }
