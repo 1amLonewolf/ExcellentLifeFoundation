@@ -55,6 +55,37 @@
         .back-to-home:hover {
             text-decoration: underline;
         }
+        
+        .stories-media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .story-item {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .story-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .story-item h3 {
+            color: var(--sunshine-yellow);
+            margin: 1rem 0 0.5rem 0;
+        }
+        
+        .story-item p {
+            color: white;
+            margin: 0.5rem 0;
+        }
     </style>
 </head>
 <body>
@@ -118,14 +149,37 @@
             <h1>Our Stories</h1>
             <p>Experience the impact of our work through the stories of those we serve.</p>
             
-            <div class="video-container">
-                <video controls>
-                    <source src="STORIES/DSCN4904.MP4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="stories-media-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <div class="story-item">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="STORIES/DSCN4904.MP4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3>Latest Transformation Story</h3>
+                    <p>Watch our latest story highlighting the transformation happening in our community.</p>
+                </div>
+                
+                <div class="story-item">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="STORIES/DSCN4903.MP4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3>Community Impact Highlights</h3>
+                    <p>See how our programs are making a difference in people's lives.</p>
+                </div>
+                
+                <div class="story-item">
+                    <div class="image-container" style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; margin: 1rem 0; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);">
+                        <img src="STORIES/DSCN4937.JPG" alt="Community Impact Photo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Impact Through Images</h3>
+                    <p>Visual moments capturing the essence of our community work.</p>
+                </div>
             </div>
-            
-            <p>Watch our latest story highlighting the transformation happening in our community.</p>
             
             <a href="index.html" class="back-to-home">Back to Home</a>
         </div>
