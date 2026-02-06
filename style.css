@@ -35,7 +35,7 @@
 
         /* Background with static image */
         body {
-            background: linear-gradient(rgba(6, 95, 70, 0.8), rgba(6, 95, 70, 0.8)), url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3') center/cover fixed;
+            background: linear-gradient(rgba(6, 95, 70, 0.6), rgba(6, 95, 70, 0.6)), url('Background.JPG') center/cover fixed;
         }
         
         /* Navigation */
