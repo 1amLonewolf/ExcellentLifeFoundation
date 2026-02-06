@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Our Work - Excellent Life Foundation</title>
+    <title>Our Stories - Excellent Life Foundation</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="Excellent_Logo.png">
     <style>
-        .donation-container {
-            max-width: 800px;
+        .stories-container {
+            max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
             background: rgba(30, 58, 138, 0.2);
@@ -16,48 +16,44 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             color: white;
-        }
-        
-        .donation-container h1 {
             text-align: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            font-size: 2.2rem;
-            font-weight: bold;
         }
-        
-        .donation-methods {
-            margin: 2rem 0;
-        }
-        
-        .donation-method {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 1.5rem;
-            border-radius: 10px;
+
+        .stories-container h1 {
+            color: var(--sunshine-yellow);
             margin-bottom: 1.5rem;
         }
-        
-        .donation-method h3 {
-            color: var(--sunshine-yellow);
-            margin-bottom: 0.5rem;
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
-        
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .back-to-home {
-            display: block;
-            text-align: center;
+            display: inline-block;
             margin-top: 2rem;
             color: var(--sunshine-yellow);
             text-decoration: none;
             font-weight: bold;
         }
-        
+
         .back-to-home:hover {
             text-decoration: underline;
-        }
-        
-        .centered-content {
-            text-align: center;
-            margin: 1rem 0;
         }
     </style>
 </head>
@@ -68,13 +64,13 @@
                 <img src="Excellent_Logo.png" alt="Excellent Life Foundation Logo" class="logo-img">
                 <span class="logo-text">Excellent Life Foundation</span>
             </div>
-            
+
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            
+
             <ul class="nav-links">
                 <li><a href="index.html#home">
                     <img src="dashboard_Icons/Home_Icon.gif" alt="Home" class="nav-icon">
@@ -104,7 +100,7 @@
                     <img src="dashboard_Icons/Stories_Icons.gif" alt="Stories" class="nav-icon">
                     <span class="nav-text">Stories</span>
                 </a></li>
-                <li><a href="index.html#events">
+                <li><a href="events.html">
                     <img src="dashboard_Icons/Events_Icon.gif" alt="Events" class="nav-icon">
                     <span class="nav-text">Events</span>
                 </a></li>
@@ -113,63 +109,25 @@
                     <span class="nav-text">Contact</span>
                 </a></li>
             </ul>
-            <a href="donate.html" class="donate-btn">Join Us in Support</a>
+            <a href="donate.html" class="donate-btn">Join Us</a>
         </div>
     </nav>
 
     <section class="hero" style="height: auto; min-height: 80vh;">
-        <div class="donation-container">
-            <h1>Support Our Work</h1>
-            <p>Thank you for considering a donation to the Excellent Life Foundation. Your support helps us empower communities with knowledge and life skills through social work. Here are the various ways you can contribute:</p>
+        <div class="stories-container">
+            <h1>Our Stories</h1>
+            <p>Experience the impact of our work through the stories of those we serve.</p>
             
-            <div class="donation-methods">
-                <div class="donation-method">
-                    <h3>Bank Transfer</h3>
-                    <p>Account Name: Excellent Life Foundation CBO</p>
-                    <p>Bank: Co-Operative Bank</p>
-                    <p>Account Number: 01100435544]</p>
-                    <p>Branch Code: 110577</p>
-                </div>
-                
-                <div class="donation-method">
-                    <h3>Mobile Money</h3>
-                    <p>Service: M-Pesa, Airtel Money, T-cash etc.</p>
-                    <p>PayBill Number: 400200</p>
-                    <p>Account: 47439</p>
-                </div>
-                
-                <div class="donation-method">
-                    <h3>In-Kind Donations</h3>
-                    <p>We also accept non-monetary contributions including:</p>
-                    <div class="centered-content">
-                        Educational materials and supplies<br>
-                        Food and clothing items<br>
-                        Medical supplies<br>
-                        Tools and equipment
-                    </div>
-                    <p>Contact us for more information about in-kind donations.</p>
-                </div>
-                
-                <div class="donation-method">
-                    <h3>Corporate Partnerships</h3>
-                    <p>Businesses can support our mission through:</p>
-                    <div class="centered-content">
-                        Sponsorship of programs<br>
-                        Employee volunteer programs<br>
-                        Matching gift programs<br>
-                        Corporate donations
-                    </div>
-                    <p>For corporate partnerships, please contact us directly.</p>
-                </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="STORIES/DSCN4904.MP4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
             
-            <p>Every contribution, regardless of size, makes a significant impact in our community. All donations are tax-deductible and directly support our mission to give hope to those without in the community.</p>
+            <p>Watch our latest story highlighting the transformation happening in our community.</p>
             
-            <p>Thank you for your generosity and for joining us in empowering the community!</p>
-            
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="index.html" class="back-to-home-btn">Back to Home</a>
-            </div>
+            <a href="index.html" class="back-to-home">Back to Home</a>
         </div>
     </section>
 
@@ -204,27 +162,27 @@
             <p>&copy; 2025 Excellent Life Foundation. All rights reserved.</p>
         </div>
     </footer>
-    
+
     <script>
         // Function to handle anchor link scrolling without hash update
         function handleAnchorLink(link, e) {
             e.preventDefault();
-            
+
             const targetId = link.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-            
+
             if (targetElement) {
                 // Scroll to the element
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
-                
+
                 // Remove the hash from the URL using history.replaceState
                 history.replaceState(null, null, window.location.pathname + window.location.search);
             }
         }
-        
+
         // Hamburger menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             // Handle all anchor links (for both navigation and other page links)
@@ -234,16 +192,16 @@
                     handleAnchorLink(this, e);
                 });
             });
-            
+
             const mobileMenu = document.getElementById('mobile-menu');
             const navLinks = document.querySelector('.nav-links');
-            
+
             if (mobileMenu) {
                 mobileMenu.addEventListener('click', function() {
                     navLinks.classList.toggle('active');
                 });
             }
-            
+
             // Close menu when clicking on a navigation link
             const navItems = document.querySelectorAll('.nav-links a');
             navItems.forEach(item => {
@@ -252,51 +210,10 @@
                     if (item.getAttribute('href').startsWith('#')) {
                         handleAnchorLink(item, e);
                     }
-                    mobileMenu.classList.remove('active');
                     navLinks.classList.remove('active');
                 });
             });
         });
     </script>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Amukura house, behind EasyCoach door no.11 along Busia-Kisumu highway<br>Email: excellentlifefoundation@gmail.com<br>Phone: +254115183795 / +254736023327</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>For Supporters</h3>
-                <p><a href="donate.html" style="color: white;">Support Our Mission</a><br>
-                <a href="https://forms.gle/Tkyt9BKXZK9Strjz6" style="color: white;">Volunteer With Us</a><br>
-                <a href="programs.html" style="color: white;">Learn About Our Programs</a></p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>For Community Members</h3>
-                <p><a href="index.html#get-help" style="color: white;">Request Assistance</a><br>
-                <a href="programs.html" style="color: white;">Our Programs</a><br>
-                <a href="index.html#contact" style="color: white;">Contact Us</a></p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Stay Connected</h3>
-                <div class="newsletter">
-                    <input type="email" placeholder="Your email address">
-                    <button class="newsletter-btn">Subscribe</button>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/share/1BW6Ziih8j/" title="Facebook"><img src="facebook.png" alt="Facebook" style="width: 24px; height: 24px; margin-right: 5px; vertical-align: middle;">Facebook</a>
-                    <a href="mailto:excellentlifefoundation@gmail.com" title="Email"><img src="gmail.png" alt="Email" style="width: 24px; height: 24px; margin-right: 5px; vertical-align: middle;">Email</a>
-                    <a href="tel:+254115183795" title="Call Us"><img src="call_us.png" alt="Call" style="width: 24px; height: 24px; margin-right: 5px; vertical-align: middle;">Call</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Excellent Life Foundation. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>
