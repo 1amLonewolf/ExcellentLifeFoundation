@@ -238,7 +238,7 @@
                     </div>
                     <div class="program-images">
                         <div class="program-image">
-                            <img src="Economic_Uplift" alt="Economic Uplift Program" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                            <img src="Economic_Uplift.jpg" alt="Economic Uplift Program" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
                         </div>
                         <div class="program-image" style="margin-top: 1rem;">
                             <img src="Economic_Uplift2.jpg" alt="Economic Uplift Program 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
@@ -253,6 +253,43 @@
             <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
                 <a href="donate.html" class="btn btn-primary" style="display: inline-block;">Support Our Work</a>
                 <a href="index.html" class="back-to-home-btn">← Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Initiatives Section -->
+    <section class="programs">
+        <h2 class="section-title">Special Initiatives</h2>
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="program-icon">❤️</div>
+                <h3>Community Outreach Programs</h3>
+                <p>Beyond our core programs, we engage in special community outreach initiatives that address immediate needs and create lasting impact in our community.</p>
+                <a href="stories.html" class="learn-more">View Our Stories →</a>
+            </div>
+        </div>
+        
+        <div class="program-detail" id="special-initiatives" style="margin-top: 3rem;">
+            <div class="program-content">
+                <div class="program-text">
+                    <h3>Virginia Children's Home Visit</h3>
+                    <p>Our team regularly visits Virginia Children's Home to bring joy, support, and resources to vulnerable children. These visits include educational activities, recreational time, and provision of essential supplies.</p>
+
+                    <h3>Busia Street Kids Feeding Program</h3>
+                    <p>We run a consistent feeding program for street children in Busia, providing nutritious meals and connecting them with essential services. This program addresses immediate hunger while building trust and relationships that can lead to longer-term support.</p>
+
+                    <h3>Impact</h3>
+                    <p>These special initiatives have touched hundreds of lives, providing immediate relief while building bridges to longer-term support systems. Our outreach efforts strengthen community bonds and demonstrate our commitment to helping the most vulnerable members of society.</p>
+                </div>
+                
+                <div class="program-images">
+                    <div class="program-image" style="margin-bottom: 1rem;">
+                        <img src="STORIES/VIRGINIA ORPHANAGE VISIT/IMG-20251130-WA0120.jpg" alt="Virginia Children's Home Visit" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div class="program-image">
+                        <img src="STORIES/BUSIA STREETKIDS FEEDING PROGRAM/DSCN4937.JPG" alt="Busia Street Kids Feeding Program" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -286,6 +323,8 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 Excellent Life Foundation. All rights reserved.</p>
+            <p>Site developed and designed by <a href="https://github.com/1amLonewolf" target="_blank" style="color: var(--sunshine-yellow); text-decoration: none; display: inline-flex; align-items: center;">
+                <img src="1onewolf.jpeg" alt="1amLonewolf Logo" style="height: 20px; width: 20px; border-radius: 50%; margin-right: 8px;">1amLonewolf</a></p>
         </div>
     </footer>
     
@@ -293,22 +332,22 @@
         // Function to handle anchor link scrolling without hash update
         function handleAnchorLink(link, e) {
             e.preventDefault();
-            
+
             const targetId = link.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-            
+
             if (targetElement) {
                 // Scroll to the element
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
-                
+
                 // Remove the hash from the URL using history.replaceState
                 history.replaceState(null, null, window.location.pathname + window.location.search);
             }
         }
-        
+
         // Hamburger menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             // Handle all anchor links (for both navigation and other page links)
@@ -318,16 +357,16 @@
                     handleAnchorLink(this, e);
                 });
             });
-            
+
             const mobileMenu = document.getElementById('mobile-menu');
             const navLinks = document.querySelector('.nav-links');
-            
+
             if (mobileMenu) {
                 mobileMenu.addEventListener('click', function() {
                     navLinks.classList.toggle('active');
                 });
             }
-            
+
             // Close menu when clicking on a navigation link
             const navItems = document.querySelectorAll('.nav-links a');
             navItems.forEach(item => {
@@ -342,45 +381,5 @@
             });
         });
     </script>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Amukura house, behind EasyCoach door no.11 along Busia-Kisumu highway<br>Email: excellentlifefoundation@gmail.com<br>Phone: +254115183795 / +254736023327</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>For Supporters</h3>
-                <p><a href="donate.html" style="color: white;">Support Our Mission</a><br>
-                <a href="https://forms.gle/Tkyt9BKXZK9Strjz6" style="color: white;">Volunteer With Us</a><br>
-                <a href="programs.html" style="color: white;">Learn About Our Programs</a></p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>For Community Members</h3>
-                <p><a href="index.html#get-help" style="color: white;">Request Assistance</a><br>
-                <a href="programs.html" style="color: white;">Our Programs</a><br>
-                <a href="index.html#contact" style="color: white;">Contact Us</a></p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Stay Connected</h3>
-                <div class="newsletter">
-                    <input type="email" placeholder="Your email address">
-                    <button class="newsletter-btn">Subscribe</button>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/share/1BW6Ziih8j/" title="Facebook"><img src="facebook.png" alt="Facebook" style="width: 24px; height: 24px; margin-right: 5px; vertical-align: middle;">Facebook</a>
-                    <a href="mailto:excellentlifefoundation@gmail.com" title="Email"><img src="gmail.png" alt="Email" style="width: 24px; height: 24px; margin-right: 5px; vertical-align: middle;">Email</a>
-                    <a href="tel:+254115183795" title="Call Us"><img src="call_us.png" alt="Call" style="width: 24px; height: 24px; margin-right: 5px; vertical-align: middle;">Call</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Excellent Life Foundation. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>

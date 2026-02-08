@@ -225,28 +225,77 @@
 
     <!-- Events Section -->
     <section id="events" class="programs">
-        <h2 class="section-title">Upcoming Events</h2>
-        <div class="programs-grid">
-            <div class="program-card">
-                <div class="program-icon">📅</div>
-                <h3>Stay Tuned for Updates!</h3>
-                <p>We're currently planning exciting events for our community.</p>
-                <a href="events.html" class="learn-more">Learn More →</a>
+        <h2 class="section-title">Our Recent Events</h2>
+        
+        <!-- Image Slider -->
+        <div class="event-slider" style="position: relative; max-width: 1000px; margin: 0 auto 2rem auto; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
+            <div class="slides" style="display: flex; transition: transform 0.5s ease-in-out;">
+                <div class="slide" style="min-width: 100%;">
+                    <img src="STORIES/VIRGINIA ORPHANAGE VISIT/IMG-20251130-WA0120.jpg" alt="Virginia Children's Home Visit" style="width: 100%; height: 400px; object-fit: cover; display: block;">
+                    <div class="slide-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 2rem 1.5rem 1rem; text-align: left;">
+                        <h3 style="margin: 0 0 0.5rem 0; color: var(--sunshine-yellow);">Virginia Children's Home Visit</h3>
+                        <p style="margin: 0; font-size: 0.9rem;">Bringing joy and support to vulnerable children</p>
+                    </div>
+                </div>
+                <div class="slide" style="min-width: 100%;">
+                    <img src="STORIES/BUSIA STREETKIDS FEEDING PROGRAM/DSCN4937.JPG" alt="Busia Street Kids Feeding Program" style="width: 100%; height: 400px; object-fit: cover; display: block;">
+                    <div class="slide-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 2rem 1.5rem 1rem; text-align: left;">
+                        <h3 style="margin: 0 0 0.5rem 0; color: var(--sunshine-yellow);">Busia Street Kids Feeding Program</h3>
+                        <p style="margin: 0; font-size: 0.9rem;">Providing nutritious meals to street children</p>
+                    </div>
+                </div>
             </div>
-            <div class="program-card">
-                <div class="program-icon">🎓</div>
-                <h3>Check Back Soon</h3>
-                <p>More events and activities will be announced shortly.</p>
-                <a href="events.html" class="learn-more">Learn More →</a>
-            </div>
-            <div class="program-card">
-                <div class="program-icon">🌱</div>
-                <h3>Follow Us</h3>
-                <p>Stay connected through our social media for the latest updates.</p>
-                <a href="events.html" class="learn-more">Learn More →</a>
+            
+            <!-- Slider Controls -->
+            <button class="prev" onclick="plusSlides(-1)" style="position: absolute; top: 50%; left: 15px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 18px; cursor: pointer; z-index: 10; transition: background 0.3s;">&#10094;</button>
+            <button class="next" onclick="plusSlides(1)" style="position: absolute; top: 50%; right: 15px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 18px; cursor: pointer; z-index: 10; transition: background 0.3s;">&#10095;</button>
+            
+            <!-- Dots Indicator -->
+            <div class="dots-container" style="position: absolute; bottom: 15px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; z-index: 10;">
+                <span class="dot active" onclick="currentSlide(1)" style="cursor: pointer; height: 12px; width: 12px; background-color: white; border-radius: 50%; display: inline-block;"></span>
+                <span class="dot" onclick="currentSlide(2)" style="cursor: pointer; height: 12px; width: 12px; background-color: white; border-radius: 50%; display: inline-block; opacity: 0.5;"></span>
             </div>
         </div>
+        
+        <div style="text-align: center; margin-top: 1.5rem;">
+            <a href="events.html" class="btn btn-primary" style="display: inline-block;">See More Events</a>
+        </div>
     </section>
+    
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+                dots[i].style.opacity = "0.5";
+            }
+            
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            dots[slideIndex-1].style.opacity = "1";
+        }
+    </script>
 
     <!-- Get Help Section -->
     <section id="get-help" class="get-help-section">
@@ -312,11 +361,6 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Amukura house, behind EasyCoach door no.11 along Busia-Kisumu highway<br>Email: excellentlifefoundation@gmail.com<br>Phone: +254115183795 / +254736023327</p>
-            </div>
-            
-            <div class="footer-section">
                 <h3>For Supporters</h3>
                 <p><a href="donate.html" style="color: white;">Support Our Mission</a><br>
                 <a href="https://forms.gle/Tkyt9BKXZK9Strjz6" style="color: white;">Volunteer With Us</a><br>
@@ -345,6 +389,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 Excellent Life Foundation. All rights reserved.</p>
+            <p>Site developed and designed by <a href="https://github.com/1amLonewolf" target="_blank" style="color: var(--sunshine-yellow); text-decoration: none; display: inline-flex; align-items: center;">1amLonewolf<img src="1onewolf.jpeg" alt="1amLonewolf Logo" style="height: 20px; width: 20px; border-radius: 50%; margin-left: 8px;"></a></p>
         </div>
     </footer>
     

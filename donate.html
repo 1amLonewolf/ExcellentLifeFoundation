@@ -202,6 +202,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 Excellent Life Foundation. All rights reserved.</p>
+            <p>Site developed and designed by <a href="https://github.com/1amLonewolf" target="_blank" style="color: var(--sunshine-yellow); text-decoration: none; display: inline-flex; align-items: center;">1amLonewolf<img src="1onewolf.jpeg" alt="1amLonewolf Logo" style="height: 20px; width: 20px; border-radius: 50%; margin-left: 8px;"></a></p>
         </div>
     </footer>
     
@@ -209,22 +210,22 @@
         // Function to handle anchor link scrolling without hash update
         function handleAnchorLink(link, e) {
             e.preventDefault();
-            
+
             const targetId = link.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-            
+
             if (targetElement) {
                 // Scroll to the element
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
-                
+
                 // Remove the hash from the URL using history.replaceState
                 history.replaceState(null, null, window.location.pathname + window.location.search);
             }
         }
-        
+
         // Hamburger menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             // Handle all anchor links (for both navigation and other page links)
@@ -234,16 +235,16 @@
                     handleAnchorLink(this, e);
                 });
             });
-            
+
             const mobileMenu = document.getElementById('mobile-menu');
             const navLinks = document.querySelector('.nav-links');
-            
+
             if (mobileMenu) {
                 mobileMenu.addEventListener('click', function() {
                     navLinks.classList.toggle('active');
                 });
             }
-            
+
             // Close menu when clicking on a navigation link
             const navItems = document.querySelectorAll('.nav-links a');
             navItems.forEach(item => {
@@ -258,45 +259,5 @@
             });
         });
     </script>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Amukura house, behind EasyCoach door no.11 along Busia-Kisumu highway<br>Email: excellentlifefoundation@gmail.com<br>Phone: +254115183795 / +254736023327</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>For Supporters</h3>
-                <p><a href="donate.html" style="color: white;">Support Our Mission</a><br>
-                <a href="https://forms.gle/Tkyt9BKXZK9Strjz6" style="color: white;">Volunteer With Us</a><br>
-                <a href="programs.html" style="color: white;">Learn About Our Programs</a></p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>For Community Members</h3>
-                <p><a href="index.html#get-help" style="color: white;">Request Assistance</a><br>
-                <a href="programs.html" style="color: white;">Our Programs</a><br>
-                <a href="index.html#contact" style="color: white;">Contact Us</a></p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Stay Connected</h3>
-                <div class="newsletter">
-                    <input type="email" placeholder="Your email address">
-                    <button class="newsletter-btn">Subscribe</button>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/share/1BW6Ziih8j/" title="Facebook"><img src="facebook.png" alt="Facebook" style="width: 24px; height: 24px; margin-right: 5px; vertical-align: middle;">Facebook</a>
-                    <a href="mailto:excellentlifefoundation@gmail.com" title="Email"><img src="gmail.png" alt="Email" style="width: 24px; height: 24px; margin-right: 5px; vertical-align: middle;">Email</a>
-                    <a href="tel:+254115183795" title="Call Us"><img src="call_us.png" alt="Call" style="width: 24px; height: 24px; margin-right: 5px; vertical-align: middle;">Call</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Excellent Life Foundation. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>
